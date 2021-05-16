@@ -360,13 +360,19 @@ B8 = (R5 << 3) | (R5 >> 2)
   (byte & 0x04 ? '1' : '0'), \
   (byte & 0x02 ? '1' : '0'), \
   (byte & 0x01 ? '1' : '0') 
-  
-  int a = 9;
-  printf("Print" BYTE_TO_BINARY_PATTERN, BYTE_TO_BINARY(a));
-  
-  
+int a = 9;
+printf("Print" BYTE_TO_BINARY_PATTERN, BYTE_TO_BINARY(a));
 ```
-
+**Set number of bits to value**
+```
+uint8_t a = 0;
+    a = ~0; 
+    int i = 2;
+    int j = 4;
+    int left = a << (j + 1);
+    int right = (1 << i) - 1;
+    int r = left | right;
+ ```
 Note: using anything other than the English letters will produce garbage results
 
 ## Additional Resources
